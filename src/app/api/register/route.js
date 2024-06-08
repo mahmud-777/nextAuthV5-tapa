@@ -22,18 +22,14 @@ export const POST = async (request) => {
   // Update the DB
  try {
   await createUser(newUser);
-  
- } catch (err) {
-  return new NextResponse(err.message, {
-    status: 500,
-  });
-  
- } 
-
 
   return new NextResponse("User has been created", {
     status: 201,
   });
-
-
+  
+ } catch (err) {
+  return new NextResponse(err.message, {
+    status: 500,
+  });  
+ } 
 }
