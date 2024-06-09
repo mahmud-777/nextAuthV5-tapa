@@ -17,7 +17,7 @@ export const {
   providers: [
     CredentialsProvider({
       async authorize(credentials) {
-        if(credentials == null) return null;
+        if(credentials === null) return null;
 
         try {
           const user = getUserByEmail(credentials?.email)
@@ -28,7 +28,7 @@ export const {
             if(isMatch){
               return user;
             }else {
-              throw new Error("Check Your Password");
+              throw new Error("Check your password");
             }
 
           }else {

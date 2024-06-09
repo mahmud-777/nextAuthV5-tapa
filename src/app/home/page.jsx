@@ -6,6 +6,7 @@ const HomePage = async () => {
   const session = await auth();
 
   if(!session?.user) redirect("/")
+    
   return (
     <div className=" flex flex-col items-center m-4">
      {

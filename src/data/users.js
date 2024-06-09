@@ -1,6 +1,7 @@
+
 const users = [
   {
-    email: "sky@gmail.com",
+    email: "mash@gmail.com",
     password: "password"
   },
   {
@@ -13,7 +14,7 @@ const users = [
   }
 ]
 
-export const getUserByEmail = email => {
+export const getUserByEmail = (email) => {
   const found = users.find(user => user.email === email)
   return found;
 }
